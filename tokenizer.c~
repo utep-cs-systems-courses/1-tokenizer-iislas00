@@ -1,0 +1,69 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include "tokenizer.h"
+
+int space_char(char c){
+  return(c == ' ' || c == '\t' || c == '\n')
+}
+
+int non_space_char(char c){
+  return(c != ' ' &&  c != '\t' && c != '\n')
+}
+
+char *word_start(char* str){
+  while(space_char(*str)){
+    str++;
+  }if(non_space_char(*str)){
+    return str;
+  }
+  
+  return 0;
+}
+
+char *word_terminator(char* word){
+  while(non_space_char(*word)){
+    word++;
+  }if(space_char(*word)){
+    return word;
+  }
+
+  return 0;
+}
+
+int count_words(char *str){
+  int counter = 0;
+  while(*str != '\0'){
+    str = word_start(str);
+    str = word_terminator(str);
+    count++;
+  }
+
+  return count;
+}
+
+char *copy_str(char* inStr, short len){
+  //this + 1 takes the null char '\0' into account
+  char* A = malloc(sizeof(char) * (len + 1);// we are dynamically allocating memory for a length
+		                             // of char's
+		  
+  for(int i = 0; i <= len; i++){
+    A[i] = inStr[i];
+  }
+
+  A[i] = '\0';
+  return A;
+}
+
+
+
+char **tokenize(char *str){
+
+  }
+void print_tokens(char **tokens){
+
+}
+void free_tokens(char **tokens){
+  //free(tokens);
+  
+}
+ 
