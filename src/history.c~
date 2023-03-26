@@ -1,0 +1,28 @@
+#include "stdio.h"
+#include "stdlib.h"
+#include "history.h"
+#include "tokenizer.h"
+
+List* init_history(){
+  List* history_list;
+  history_list = NULL;
+  history_list = malloc(sizeof(List));
+  return history_list;
+  
+}
+
+void add_history(List* list, char* str){
+  Item* 
+}
+
+char* get_history(List* list, int id){
+
+}
+
+void print_history(List* list){
+
+}
+
+void free_history(List* list){
+
+}

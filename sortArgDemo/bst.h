@@ -1,5 +1,4 @@
 #include "stdio.h"
-
 typedef struct BstNode_s {
   struct BstNode_s *children[2];
   char *str;

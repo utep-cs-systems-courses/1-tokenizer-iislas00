@@ -4,7 +4,7 @@
 
 /* Return true (non-zero) if c is a whitespace characer
    ('\t' or ' ').  
-   Zero terminators are not printable (therefore false) */
+,   Zero terminators are not printable (therefore false) */
 int space_char(char c);
 
 /* Return true (non-zero) if c is a non-whitespace 
@@ -19,14 +19,13 @@ char *word_start(char *str);
 
 /* Returns a pointer terminator char following *word */
 char *word_terminator(char *word);
-
 /* Counts the number of words in the string argument. */
 int count_words(char *str);
 
 /* Returns a fresly allocated new zero-terminated string 
    containing <len> chars from <inStr> */
 char *copy_str(char *inStr, short len);
-
+ 
 /* Returns a freshly allocated zero-terminated vector of freshly allocated 
    space-separated tokens from zero-terminated str.
 
